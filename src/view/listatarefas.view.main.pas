@@ -19,8 +19,9 @@ type
     edtPesquisa: TEdit;
     btnPesquisar: TButton;
     lvTarefas: TListView;
+    procedure FormCreate(Sender: TObject);
   private
-    { Private declarations }
+     function ValidaUsuario(aEmail, aSenha: String): Boolean;
   public
     { Public declarations }
   end;
@@ -30,6 +31,41 @@ var
 
 implementation
 
+uses
+  listatarefas.view.login, listatarefas.model.usuario;
+
 {$R *.dfm}
+
+procedure TfrmPrincipal.FormCreate(Sender: TObject);
+var
+   lLogin: TFrmLogin;
+begin
+   lLogin := TfrmLogin.Create(nil);
+   try
+      lLogin.ShowModal;
+
+      if (not ValidaUsuario(lLogin.edtEmail.Text, lLogin.edtsenha.Text)) then
+      begin
+         ShowMessage('Usuário e/ou senha inválidos!');
+         Application.Terminate;
+      end;
+
+   finally
+      lLogin.Free;
+   end;
+end;
+
+function TfrmPrincipal.ValidaUsuario(aEmail, aSenha: String): Boolean;
+var
+   lUsuario: TUsuario;
+begin
+   lUsuario := TUsuario.Create;
+   try
+
+      Result := ((lUsuario.Email = aEmail) and (lUsuario.senha = aSenha));
+   finally
+      lUsuario.Free;
+   end;
+end;
 
 end.

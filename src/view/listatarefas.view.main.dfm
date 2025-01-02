@@ -10,6 +10,7 @@ object frmPrincipal: TfrmPrincipal
   Font.Height = -12
   Font.Name = 'Segoe UI'
   Font.Style = []
+  OnCreate = FormCreate
   TextHeight = 15
   object pnlMain: TPanel
     Left = 0
@@ -23,9 +24,6 @@ object frmPrincipal: TfrmPrincipal
     Padding.Right = 3
     Padding.Bottom = 3
     TabOrder = 0
-    ExplicitTop = -16
-    ExplicitWidth = 624
-    ExplicitHeight = 441
     object pnlHeader: TPanel
       Left = 3
       Top = 3
@@ -45,7 +43,6 @@ object frmPrincipal: TfrmPrincipal
       Padding.Bottom = 3
       ParentFont = False
       TabOrder = 0
-      ExplicitTop = -301
     end
     object pnlLista: TPanel
       Left = 3
@@ -59,9 +56,6 @@ object frmPrincipal: TfrmPrincipal
       Padding.Right = 3
       Padding.Bottom = 3
       TabOrder = 1
-      ExplicitTop = 94
-      ExplicitWidth = 381
-      ExplicitHeight = 325
       object lvTarefas: TListView
         Left = 3
         Top = 3
@@ -70,10 +64,6 @@ object frmPrincipal: TfrmPrincipal
         Align = alClient
         Columns = <>
         TabOrder = 0
-        ExplicitLeft = 72
-        ExplicitTop = 80
-        ExplicitWidth = 250
-        ExplicitHeight = 150
       end
     end
     object pnlFooter: TPanel
@@ -88,9 +78,6 @@ object frmPrincipal: TfrmPrincipal
       Padding.Right = 3
       Padding.Bottom = 3
       TabOrder = 2
-      ExplicitLeft = 0
-      ExplicitTop = 398
-      ExplicitWidth = 603
       object btnNovo: TButton
         AlignWithMargins = True
         Left = 6
@@ -100,8 +87,6 @@ object frmPrincipal: TfrmPrincipal
         Align = alLeft
         Caption = 'Novo'
         TabOrder = 0
-        ExplicitLeft = -3
-        ExplicitHeight = 40
       end
       object btnEditar: TButton
         AlignWithMargins = True
@@ -114,9 +99,6 @@ object frmPrincipal: TfrmPrincipal
         Caption = 'Editar'
         ParentBiDiMode = False
         TabOrder = 1
-        ExplicitLeft = 78
-        ExplicitTop = 0
-        ExplicitHeight = 40
       end
       object btnCancelar: TButton
         AlignWithMargins = True
@@ -127,9 +109,6 @@ object frmPrincipal: TfrmPrincipal
         Align = alRight
         Caption = 'Cancelar'
         TabOrder = 2
-        ExplicitLeft = 160
-        ExplicitTop = 8
-        ExplicitHeight = 25
       end
     end
     object pnltarefas: TPanel
@@ -144,7 +123,6 @@ object frmPrincipal: TfrmPrincipal
       Padding.Right = 3
       Padding.Bottom = 3
       TabOrder = 3
-      ExplicitWidth = 366
       object edtPesquisa: TEdit
         Left = 6
         Top = 3
@@ -158,6 +136,7 @@ object frmPrincipal: TfrmPrincipal
         Font.Style = []
         ParentFont = False
         TabOrder = 0
+        ExplicitHeight = 29
       end
       object btnPesquisar: TButton
         Left = 308
@@ -173,7 +152,6 @@ object frmPrincipal: TfrmPrincipal
         Font.Style = []
         ParentFont = False
         TabOrder = 1
-        ExplicitLeft = 305
       end
     end
   end

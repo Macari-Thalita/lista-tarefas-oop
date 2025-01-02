@@ -6,15 +6,15 @@ uses
   listatarefas.model.usuario in 'src\model\listatarefas.model.usuario.pas',
   listatarefas.model.tarefas in 'src\model\listatarefas.model.tarefas.pas',
   listatarefas.view.cadastrousuario in 'src\view\listatarefas.view.cadastrousuario.pas' {frmCadastroUsuario},
-  listatarefas.view.cadastrotarefas in 'src\view\listatarefas.view.cadastrotarefas.pas' {frmCadastroTarefas};
+  listatarefas.view.cadastrotarefas in 'src\view\listatarefas.view.cadastrotarefas.pas' {frmCadastroTarefas},
+  listatarefas.view.login in 'src\view\listatarefas.view.login.pas' {frmLogin};
 
 {$R *.res}
 
 begin
   Application.Initialize;
+  ReportMemoryLeaksOnShutdown := True;
   Application.MainFormOnTaskbar := True;
-  Application.CreateForm(TfrmPrincipal, frmPrincipal);
-  Application.CreateForm(TfrmCadastroUsuario, frmCadastroUsuario);
-  Application.CreateForm(TfrmCadastroTarefas, frmCadastroTarefas);
+  Application.CreateForm(TfrmLogin, frmLogin);
   Application.Run;
 end.
