@@ -2,87 +2,114 @@ object frmCadastroUsuario: TfrmCadastroUsuario
   Left = 0
   Top = 0
   Caption = 'Cadastro de Usu'#225'rio'
-  ClientHeight = 347
-  ClientWidth = 402
+  ClientHeight = 264
+  ClientWidth = 321
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = -12
   Font.Name = 'Segoe UI'
   Font.Style = []
+  OnCreate = FormCreate
+  OnDestroy = FormDestroy
   TextHeight = 15
   object pnlMain: TPanel
     Left = 0
     Top = 0
-    Width = 402
-    Height = 306
+    Width = 321
+    Height = 223
     Align = alClient
     BevelOuter = bvNone
     Padding.Left = 3
     Padding.Right = 3
     Padding.Bottom = 3
     TabOrder = 0
-    ExplicitLeft = 120
-    ExplicitTop = 176
-    ExplicitWidth = 185
-    ExplicitHeight = 41
+    ExplicitWidth = 402
+    ExplicitHeight = 306
     object pnlCadastro: TPanel
-      Left = 3
-      Top = 0
-      Width = 396
-      Height = 303
+      AlignWithMargins = True
+      Left = 6
+      Top = 3
+      Width = 309
+      Height = 214
       Align = alClient
       BevelOuter = bvNone
       Padding.Left = 3
       Padding.Right = 3
       Padding.Bottom = 3
       TabOrder = 0
-      ExplicitLeft = 112
-      ExplicitTop = 136
-      ExplicitWidth = 185
-      ExplicitHeight = 41
+      ExplicitLeft = 12
+      ExplicitWidth = 390
+      ExplicitHeight = 297
+      object lblNome: TLabel
+        Left = 0
+        Top = 16
+        Width = 43
+        Height = 21
+        Caption = 'Nome'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -16
+        Font.Name = 'Segoe UI'
+        Font.Style = []
+        ParentFont = False
+      end
+      object lblEmail: TLabel
+        Left = 0
+        Top = 77
+        Width = 44
+        Height = 21
+        Caption = 'E-mail'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -16
+        Font.Name = 'Segoe UI'
+        Font.Style = []
+        ParentFont = False
+      end
+      object lblSenha: TLabel
+        Left = 1
+        Top = 138
+        Width = 43
+        Height = 21
+        Caption = 'Senha'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -16
+        Font.Name = 'Segoe UI'
+        Font.Style = []
+        ParentFont = False
+      end
       object edtNome: TEdit
         AlignWithMargins = True
-        Left = 6
-        Top = 3
-        Width = 384
+        Left = 0
+        Top = 43
+        Width = 305
         Height = 23
-        Align = alTop
         TabOrder = 0
-        ExplicitLeft = 136
-        ExplicitTop = 144
-        ExplicitWidth = 121
-      end
-      object edtEmail: TEdit
-        AlignWithMargins = True
-        Left = 6
-        Top = 61
-        Width = 384
-        Height = 23
-        Align = alTop
-        TabOrder = 1
-        ExplicitLeft = 120
-        ExplicitTop = 208
-        ExplicitWidth = 121
       end
       object edtSenha: TEdit
         AlignWithMargins = True
-        Left = 6
-        Top = 32
-        Width = 384
+        Left = 0
+        Top = 165
+        Width = 305
         Height = 23
-        Align = alTop
         TabOrder = 2
-        ExplicitLeft = 136
-        ExplicitTop = 173
-        ExplicitWidth = 121
+      end
+      object edtEmail: TEdit
+        AlignWithMargins = True
+        Left = 0
+        Top = 104
+        Width = 305
+        Height = 23
+        TabOrder = 1
       end
     end
   end
   object pnlFooter: TPanel
     Left = 0
-    Top = 306
-    Width = 402
+    Top = 223
+    Width = 321
     Height = 41
     Align = alBottom
     BevelOuter = bvNone
@@ -90,9 +117,8 @@ object frmCadastroUsuario: TfrmCadastroUsuario
     Padding.Top = 3
     Padding.Bottom = 3
     TabOrder = 1
-    ExplicitLeft = 120
-    ExplicitTop = 176
-    ExplicitWidth = 185
+    ExplicitTop = 306
+    ExplicitWidth = 402
     object btnSalvar: TButton
       Left = 3
       Top = 3
@@ -101,9 +127,7 @@ object frmCadastroUsuario: TfrmCadastroUsuario
       Align = alLeft
       Caption = 'Salvar'
       TabOrder = 0
-      ExplicitLeft = 168
-      ExplicitTop = 8
-      ExplicitHeight = 25
+      OnClick = btnSalvarClick
     end
   end
 end

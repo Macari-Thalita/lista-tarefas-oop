@@ -4,7 +4,8 @@ interface
 
 uses
   Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
-  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.ExtCtrls, Vcl.StdCtrls;
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.ExtCtrls, Vcl.StdCtrls,
+  listatarefas.view.cadastrousuario;
 
 type
   TfrmLogin = class(TForm)
@@ -14,11 +15,13 @@ type
     edtEmail: TEdit;
     lblEmail: TLabel;
     pnlCenter2: TPanel;
-    edtsenha: TEdit;
+    edtSenha: TEdit;
     lblSenha: TLabel;
     pnlFooter: TPanel;
     btnEntrar: TButton;
     btnCadastrar: TButton;
+    procedure btnEntrarClick(Sender: TObject);
+    procedure btnCadastrarClick(Sender: TObject);
   private
     { Private declarations }
   public
@@ -31,5 +34,30 @@ var
 implementation
 
 {$R *.dfm}
+
+procedure TfrmLogin.btnCadastrarClick(Sender: TObject);
+begin
+var
+   lCadastroUsuario: TfrmCadastroUsuario;
+begin
+   lCadastroUsuario := TfrmCadastroUsuario.Create(nil);
+   try
+      lCadastroUsuario.ShowModal;
+      if (lCadastroUsuario.ModalResult = mrOk) then
+      begin
+         edtEmail.text := lCadastroUsuario.FUsuario.Email;
+         edtSenha.Text := lCadastroUsuario.FUsuario.Senha;
+         btnEntrar.SetFocus;
+      end;
+   finally
+      FreeAndNil(lCadastroUsuario);
+   end;
+end;
+end;
+
+procedure TfrmLogin.btnEntrarClick(Sender: TObject);
+begin
+   Close;
+end;
 
 end.

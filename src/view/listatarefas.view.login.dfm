@@ -23,9 +23,6 @@ object frmLogin: TfrmLogin
     Padding.Right = 3
     Padding.Bottom = 3
     TabOrder = 0
-    ExplicitTop = 0
-    ExplicitWidth = 418
-    ExplicitHeight = 441
   end
   object pnlHeader: TPanel
     Left = 0
@@ -39,8 +36,6 @@ object frmLogin: TfrmLogin
     Align = alTop
     BevelOuter = bvNone
     TabOrder = 1
-    ExplicitLeft = -5
-    ExplicitTop = -3
     object lblEmail: TLabel
       Left = 0
       Top = 63
@@ -54,8 +49,6 @@ object frmLogin: TfrmLogin
       Font.Name = 'Segoe UI'
       Font.Style = []
       ParentFont = False
-      ExplicitLeft = 16
-      ExplicitTop = 35
       ExplicitWidth = 44
     end
     object edtEmail: TEdit
@@ -66,9 +59,6 @@ object frmLogin: TfrmLogin
       Height = 23
       Align = alBottom
       TabOrder = 0
-      ExplicitLeft = 16
-      ExplicitTop = 62
-      ExplicitWidth = 362
     end
   end
   object pnlCenter: TPanel
@@ -83,10 +73,6 @@ object frmLogin: TfrmLogin
     Padding.Right = 10
     Padding.Bottom = 20
     TabOrder = 2
-    ExplicitLeft = 120
-    ExplicitTop = 176
-    ExplicitWidth = 185
-    ExplicitHeight = 41
   end
   object pnlCenter2: TPanel
     Left = 0
@@ -96,10 +82,6 @@ object frmLogin: TfrmLogin
     Align = alClient
     BevelOuter = bvNone
     TabOrder = 3
-    ExplicitLeft = -16
-    ExplicitTop = 116
-    ExplicitWidth = 441
-    ExplicitHeight = 261
     object lblSenha: TLabel
       Left = 0
       Top = 0
@@ -113,11 +95,9 @@ object frmLogin: TfrmLogin
       Font.Name = 'Segoe UI'
       Font.Style = []
       ParentFont = False
-      ExplicitLeft = 16
-      ExplicitTop = 27
       ExplicitWidth = 43
     end
-    object edtsenha: TEdit
+    object edtSenha: TEdit
       AlignWithMargins = True
       Left = 3
       Top = 24
@@ -145,9 +125,7 @@ object frmLogin: TfrmLogin
         Align = alLeft
         Caption = 'Entrar'
         TabOrder = 0
-        ExplicitLeft = 8
-        ExplicitTop = 0
-        ExplicitHeight = 105
+        OnClick = btnEntrarClick
       end
       object btnCadastrar: TButton
         Left = 180
@@ -157,9 +135,7 @@ object frmLogin: TfrmLogin
         Align = alRight
         Caption = 'Cadastrar'
         TabOrder = 1
-        ExplicitLeft = 3
-        ExplicitTop = 3
-        ExplicitHeight = 35
+        OnClick = btnCadastrarClick
       end
     end
   end
